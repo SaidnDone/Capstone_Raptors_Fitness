@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Raptors Fitness - Sign Up</title>
+</head>
+<body>
+    <h2>Sign Up</h2>
+    <!-- Your sign-up form goes here -->
+    <form id="signupForm" action="/signup" method="POST">
+        <!-- Form fields for username, email, password -->
+        <label for="username">Username:</label>
+        <input type="text" id="username" name="username" required>
+
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Sign Up">
+    </form>
+    <a href="/">Back to Home</a>
+
+    <script>
+        document.getElementById('signupForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+
+            const username = document.getElementById('username').value;
+            const email = document.getElementById('email').value;
+            const password = document.getElementById('password').value;
+
+            // Send a POST request to your server with the user data
+            const response = await fetch('/signup', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ username, email, password }),
+            });
+
+            const result = await response.json();
+
+            // Handle the response from the server
+            if (response.ok) {
+                alert('Sign up successful!'); // You can customize this part based on your needs
+                window.location.href = '/'; // Redirect to the home page or another page
+            } else {
+                alert(`Sign up failed: ${result.error}`); // Display the error message
+            }
+        });
+    </script>
+     <!-- Bootstrap JavaScript and dependencies -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UoI9bJsjZpxr0R+A03ewqnM2iJPcrQexnjP00DJWxegM5K3s5nC1XlY+Jo4cpj" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

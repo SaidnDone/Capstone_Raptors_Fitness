@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Raptors Fitness - Memberships</title>
+</head>
+<body>
+    <h2>Memberships</h2>
+    <!-- Memberships content goes here -->
+    <div>
+        <label>
+            <input type="checkbox" id="bronzeCheckbox"> Bronze Membership - $20/month
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="checkbox" id="silverCheckbox"> Silver Membership - $30/month
+        </label>
+    </div>
+    <div>
+        <label>
+            <input type="checkbox" id="goldCheckbox"> Gold Membership - $50/month
+        </label>
+    </div>
+    <button id="addToCartBtn">Add to Cart</button>
+    <a href="/">Back to Home</a>
+
+    <script>
+        // Cart management logic
+        const cart = [];
+
+        document.getElementById('addToCartBtn').addEventListener('click', function () {
+            // Check which memberships are selected and add them to the cart
+            const bronzeCheckbox = document.getElementById('bronzeCheckbox');
+            const silverCheckbox = document.getElementById('silverCheckbox');
+            const goldCheckbox = document.getElementById('goldCheckbox');
+
+            if (bronzeCheckbox.checked) {
+                cart.push({ name: 'Bronze Membership', price: 20 });
+            }
+
+            if (silverCheckbox.checked) {
+                cart.push({ name: 'Silver Membership', price: 30 });
+            }
+
+            if (goldCheckbox.checked) {
+                cart.push({ name: 'Gold Membership', price: 50 });
+            }
+
+            // Redirect to cart.html after items are added to the cart
+            window.location.href = '/cart.html';
+        });
+    </script>
+     <!-- Bootstrap JavaScript and dependencies -->
+     <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+     <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UoI9bJsjZpxr0R+A03ewqnM2iJPcrQexnjP00DJWxegM5K3s5nC1XlY+Jo4cpj" crossorigin="anonymous"></script>
+     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
+</body>
+</html>

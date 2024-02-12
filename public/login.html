@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Raptors Fitness - Log In</title>
+    <style>
+        /* Add your additional styles here if needed */
+        #loginMessage {
+            margin-top: 10px;
+        }
+    </style>
+</head>
+<body>
+    <h2>Log In</h2>
+    <!-- Your login form goes here -->
+    <form id="loginForm" action="/login" method="POST">
+        <!-- Form fields for username/email and password -->
+        <label for="usernameOrEmail">Username/Email:</label>
+        <input type="text" id="usernameOrEmail" name="usernameOrEmail" required>
+
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+
+        <input type="submit" value="Log In">
+    </form>
+    <p id="loginMessage"></p>
+    <a href="/">Back to Home</a>
+    
+    <script>
+        document.getElementById('loginForm').addEventListener('submit', async function (event) {
+            event.preventDefault(); // Prevents the default form submission behavior
+
+            const usernameOrEmail = document.getElementById('usernameOrEmail').value;
+            const password = document.getElementById('password').value;
+
+            // Send a POST request to your server with the login data
+            const response = await fetch('/login', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ usernameOrEmail, password }),
+            });
+
+            const result = await response.json();
+
+            // Handle the response from the server
+            const loginMessage = document.getElementById('loginMessage');
+
+            if (response.ok) {
+                loginMessage.innerText = 'Login successful!';
+                loginMessage.style.color = 'green';
+
+                // Redirect to index.html after a successful login
+                window.location.href = '/index.html';
+            } else {
+                loginMessage.innerText = `Login failed: ${result.error}`;
+                loginMessage.style.color = 'red';
+            }
+        });
+    </script>
+</body>
+</html>

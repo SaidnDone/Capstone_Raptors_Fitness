@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Raptors Fitness - Admin</title>
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            const searchInput = document.getElementById('searchInput');
+            const userList = document.getElementById('userList');
+            const userDetailLink = document.getElementById('userDetailLink');
+
+            let selectedUserId;
+            let selectedUser;
+
+            // Fetch all users and populate the user list
+            async function fetchUsers() {
+                const response = await fetch('/users'); // Update the endpoint as needed
+                const users = await response.json();
+
+                userList.innerHTML = '';
+
+                users.forEach(user => {
+                    const listItem = document.createElement('li');
+                    // Make each user in the list clickable
+                    listItem.innerHTML = `<a href="#" onclick="selectUser('${user._id}')">${user.username} - ${user.email}</a>`;
+                    userList.appendChild(listItem);
+                });
+            }
+
+            // Handle search input
+            searchInput.addEventListener('input', fetchUsers);
+
+            // Function to handle user selection
+            window.selectUser = function (userId) {
+                selectedUserId = userId;
+
+                // Fetch the selected user's details
+                fetch(`/users/${selectedUserId}`)
+                    .then(response => response.json())
+                    .then(user => {
+                        selectedUser = user;
+                        // Redirect to user-details.html with the selected user's information
+                        window.location.href = `/user-details.html?id=65c80449478ef491bf7a7da3`;
+                    });
+            };
+
+            // Initial fetch to populate the user list
+            fetchUsers();
+
+        });
+    </script>
+</head>
+
+<body>
+    <h2>User Management</h2>
+
+    <!-- Search bar -->
+    <input type="text" id="searchInput" placeholder="Search by username or email">
+
+    <!-- User list -->
+    <ul id="userList"></ul>
+
+    <a href="/">Back to Home</a>
+</body>
+
+</html>
