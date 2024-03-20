@@ -1,77 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
-    <link rel="stylesheet" href="styles.css">
-    <title>Raptors Fitness - Home</title>
-</head>
-<body>
-    <!-- Navigation Bar -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container">
-            <ul class="navbar-nav">
-                <li class="nav-item">
-                    <a class="nav-link" href="/signup">Sign Up</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/login">Log In</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/memberships">Memberships</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/admin.html">Admin</a>
-                </li>
-            </ul>
-        </div>
-    </nav>
+  <head>
+    <meta charset="utf-8" />
+    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="theme-color" content="#000000" />
+    <meta
+      name="description"
+      content="Web site created using create-react-app"
+    />
+    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+    <!--
+      manifest.json provides metadata used when your web app is installed on a
+      user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
+    -->
+    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
+    <!--
+      Notice the use of %PUBLIC_URL% in the tags above.
+      It will be replaced with the URL of the `public` folder during the build.
+      Only files inside the `public` folder can be referenced from the HTML.
 
-    <!-- Main Content -->
-    <div class="container mt-4">
-        <h1>Welcome to Raptors Fitness</h1>
-        
-        <!-- Gym.jpg centered with textbox below -->
-        <div class="row text-center mt-4">
-            <div class="col-md-12">
-                <img src="images/gym.jpg" alt="Gym Image" class="img-fluid">
-            </div>
-            <div class="col-md-12 mt-4">
-                <div class="textbox">
-                    <h2></h2>
-                </div>
-            </div>
-        </div>
+      Unlike "/favicon.ico" or "favicon.ico", "%PUBLIC_URL%/favicon.ico" will
+      work correctly both with client-side routing and a non-root public URL.
+      Learn how to configure a non-root public URL by running `npm run build`.
+    -->
+    <title>React App</title>
+  </head>
+  <body>
+    <noscript>You need to enable JavaScript to run this app.</noscript>
+    <div id="root"></div>
+    <!--
+      This HTML file is a template.
+      If you open it directly in the browser, you will see an empty page.
 
-        <!-- Dumbbell.jpg on the left with textbox below -->
-        <div class="row mt-4">
-            <div class="col-md-6">
-                <img src="images/dumbbell.jpg" alt="Dumbbell Image" class="img-fluid">
-            </div>
-            <div class="col-md-6">
-                <div class="textbox mt-4">
-                    <p>Experience personalized workouts tailored to your fitness goals. Our advanced AI technology creates customized exercise routines designed to maximize your results.</p>
-                </div>
-            </div>
-        </div>
+      You can add webfonts, meta tags, or analytics to this file.
+      The build step will place the bundled scripts into the <body> tag.
 
-        <!-- Treadmill.jpg on the right with textbox on the left -->
-        <div class="row mt-4">
-            <div class="col-md-6 order-md-2">
-                <img src="images/nutrition.jpg" alt="Nutrition Image" class="img-fluid">
-            </div>
-            <div class="col-md-6 order-md-1">
-                <div class="textbox mt-4">
-                    <p>Unlock the power of AI-driven nutrition guides. Our intelligent system analyzes your dietary preferences and provides personalized nutrition recommendations, making your fitness journey more effective and enjoyable.</p>
-                </div>
-            </div>
-        </div>
-    </div>
-
-    <!-- Bootstrap JavaScript and dependencies -->
-    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js" integrity="sha384-UoI9bJsjZpxr0R+A03ewqnM2iJPcrQexnjP00DJWxegM5K3s5nC1XlY+Jo4cpj" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js" integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM" crossorigin="anonymous"></script>
-</body>
+      To begin the development, run `npm start` or `yarn start`.
+      To create a production bundle, use `npm run build` or `yarn build`.
+    -->
+  </body>
 </html>
