@@ -110,11 +110,6 @@
     color: inherit;
   }
   
-  FaFacebook {
-    height: 30px;
-    width: 30px;
-  }
-
   a,
   img,
   span,
@@ -235,7 +230,6 @@
   .btn-primary {
     background-color: var(--coquelicot);
     color: var(--white);
-    font-weight:bold;
   }
   
   .btn-primary:is(:hover, :focus) {
@@ -1161,9 +1155,7 @@
     .nav-open-btn,
     .nav-close-btn { display: none; }
   
-    .header .btn { 
-        font-weight: bold;
-        display: block; }
+    .header .btn { display: block; }
   
     .header {
       background-color: transparent;
@@ -1198,7 +1190,6 @@
     }
   
     .navbar-list {
-      font-weight: bold;
       display: flex;
       gap: 10px;
     }
