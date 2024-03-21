@@ -1,8 +1,7 @@
 import React, { useState, useEffect } from 'react';
-import './Header.module.css';
-// 假设你有相应的图标组件或者SVG文件
+import '../../assets/css/style.css';
+
 import { ReactComponent as RaptorIcon } from '../../assets/icons/raptor.svg';
-// import { ReactComponent as CloseIcon } from './assets/icons/close-sharp.svg';
 
 function Header() {
   const [isActive, setIsActive] = useState(false);
