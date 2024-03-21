@@ -52,7 +52,7 @@ function Header() {
         </nav>
         <a href="/Register" className="btn btn-secondary">Try Now</a>
         <button className="nav-open-btn" aria-label="open menu">
-          {/* 这里你可以使用一个汉堡菜单图标 */}
+
           <span className="line"></span>
           <span className="line"></span>
           <span className="line"></span>
