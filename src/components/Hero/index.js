@@ -4,7 +4,7 @@ import heroBanner from '../../assets/images/hero-banner.png';
 import heroCircleOne from '../../assets/images/hero-circle-one.png'; 
 import heroCircleTwo from '../../assets/images/hero-circle-two.png'; 
 import heartRate from '../../assets/images/heart-rate.svg'; 
-import './Header.module.css';
+import '../../assets/css/style.css';
 
 function HeroSection() {
   
