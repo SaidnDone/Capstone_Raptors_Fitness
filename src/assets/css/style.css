@@ -228,6 +228,7 @@
   }
   
   .btn-primary {
+    font-weight: bold;
     background-color: var(--coquelicot);
     color: var(--white);
   }
