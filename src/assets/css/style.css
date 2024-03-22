@@ -228,6 +228,7 @@
   }
   
   .btn-primary {
+    font-weight: bold;
     background-color: var(--coquelicot);
     color: var(--white);
   }
@@ -239,6 +240,8 @@
   }
   
   .btn-secondary {
+    font-size: 20px;
+    font-weight: 900;
     background-color: var(--white);
     color: var(--coquelicot);
   }
@@ -1195,15 +1198,17 @@
     }
   
     .navbar-link {
+      font-weight: 900;
       color: var(--white);
       font-size: unset;
       padding: 0 10px;
       margin-block-end: 0;
     }
+    
   
     .header.active .navbar-link { color: var(--rich-black-fogra-29-1); }
   
-    .header .navbar-link:is(:hover, :focus, .active) { color: var(--coquelicot); }
+    .header .navbar-link:is(:hover, :focus) { color: var(--coquelicot); }
   
     .header.active .btn {
       background-color: var(--coquelicot);
