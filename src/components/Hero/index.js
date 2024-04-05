@@ -23,7 +23,7 @@ function HeroSection() {
           <p className="section-text">
             Personal, cheap, long-term, fitness assistant who answers every question
           </p>
-          <a href="/Register" className="btn btn-primary">Get Started</a>
+          <a href="https://raptors-fitness-chat.vercel.app/" className="btn btn-primary">Get Started</a>
         </div>
         <div className="hero-banner">
           <img src={heroBanner} width="660" height="753" alt="hero banner" className="w-100" />
